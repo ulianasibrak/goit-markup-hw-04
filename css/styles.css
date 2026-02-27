@@ -123,6 +123,8 @@ h1 {
 .hero {
     background-color: #2E2F42;
     padding: 188px 0;
+    background-image: rgba(46, 47, 66, 0.7),
+    url("../images/background.jpg");
 }
 
 .button {

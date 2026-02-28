@@ -68,14 +68,31 @@ ol {
     text-decoration: none;
     color: #2E2F42;
     display: block;
-        padding: 24px 0;
+    padding: 24px 0;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
 .nav-link:focus {
     color: #404BBF;
 }
-
+.nav-link.active {
+    color: #404BBF;
+    position: relative;
+}
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+    transition: width 0.3s ease-in-out;
+}
 .contacts { 
     display: flex;
 }
@@ -97,6 +114,9 @@ ol {
     display: flex;
     gap: 40px;
     margin-left: auto;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .page-address .link:hover,
 .page-address .link:focus {
@@ -123,8 +143,15 @@ h1 {
 .hero {
     background-color: #2E2F42;
     padding: 188px 0;
-    background-image: rgba(46, 47, 66, 0.7),
-    url("../images/background.jpg");
+    background-image:
+        linear-gradient(
+            to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url("../images/background-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .button {
@@ -141,6 +168,9 @@ h1 {
     padding: 16px 32px;
     display: block;
     margin: 0 auto;
+    transition-property: background-color;
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -193,6 +223,20 @@ h1 {
 .feat .feature-description {
     width: 264px;
 }
+
+.feature-icon-wrapper {
+    width: 264px;
+    height: 112px; 
+    margin: 8px;
+    border: 1px solid #8E8F99;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    background-color: #F4F4FD;
+}
+
+
 .team {
     background-color: #F4F4FD;
     padding: 120px 0;
@@ -230,7 +274,19 @@ h1 {
 .team-member {
     background-color: #FFFFFF;
     width: 264px;
-    border-radius: 0 0 4px 4px
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.socials {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 24px;
+        margin: 8px;
+}
+.feature-icon {
+    align-items: center;
 }
 
 .team-info {
@@ -254,7 +310,29 @@ h2 {
     letter-spacing: 0.02em;
     color: #2E2F42;
 }
-
+.project-overlay-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #F4F4FD;
+    padding: 40px 32px;
+    background-color: #4D5AE5;
+    width: 100%;
+    height: 100%;
+   transform: translateY(100%);
+   transition-property: transform;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   overflow: hidden;
+}
 .portfolio {
     padding: 120px 0;
 }
@@ -272,7 +350,17 @@ h2 {
 
 .port-item {
     width: 360px;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }   
+
+.port-item:hover .overlay {
+    transform: translateY(0);
+}
+.port-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
 .project-type {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -293,6 +381,13 @@ h2 {
     padding: 100px 0;
     display: block;
     text-align: left;
+}
+h3 { 
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
 }
 
 .footer-description {
@@ -323,4 +418,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .section {
     padding: 120px 0;
+}
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    gap: 120px;
 }

@@ -13,6 +13,7 @@ body {
 header {
     background-color: #FFFFFF;
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0 4px 4px 0 rgba(46, 47, 66, 0.08), 0 2px 2px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .page-header .container {
     display: flex;
@@ -152,6 +153,8 @@ h1 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    max-width: 1440px;
+        margin: 0 auto;
 }
 
 .button {
@@ -250,6 +253,15 @@ h1 {
     justify-content: flex-start;
     gap: 24px;
 }
+
+.team-list .socials {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 24px;
+        margin: 8px;
+}
 .team-name {
     color: #2E2F42;
     font-family: "Roboto", sans-serif;
@@ -270,21 +282,35 @@ h1 {
     text-align: center;
     margin-top: 8px;
 }
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: #4d5ae5;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #404bbf;
+}
+
+.social-icon {
+    fill: #ffffff;
+}
 .team-member {
     background-color: #FFFFFF;
     width: 264px;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
-.socials {
-    display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        gap: 24px;
-        margin: 8px;
-}
+
 .feature-icon {
     align-items: center;
 }
@@ -382,13 +408,6 @@ h2 {
     display: block;
     text-align: left;
 }
-h3 { 
-    font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0.02em;
-        color: #FFFFFF;
-}
 
 .footer-description {
     font-family: "Roboto", sans-serif;
@@ -424,4 +443,27 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     align-items: baseline;
     gap: 120px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #4d5ae5;
+    border-radius: 50%;
+gap: 16px;
+    /* відстань між кружечками */
+    margin-top: 16px;
+}
+.social-item {
+  width: 40px;
+  height: 40px;
+}
+.footer-link:hover,
+.footer-link:focus {
+    background-color: #31d0aa;
 }

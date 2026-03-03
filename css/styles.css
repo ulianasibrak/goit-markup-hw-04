@@ -230,7 +230,7 @@ h1 {
 .feature-icon-wrapper {
     width: 264px;
     height: 112px; 
-    margin: 8px;
+    margin-bottom: 8px;
     border: 1px solid #8E8F99;
         border-radius: 4px;
         display: flex;
@@ -260,7 +260,7 @@ h1 {
         justify-content: center;
         flex-direction: row;
         gap: 24px;
-        margin: 8px;
+        margin-top: 8px;
 }
 .team-name {
     color: #2E2F42;
@@ -365,13 +365,12 @@ h2 {
 .portfolio-title {
     margin-bottom: 72px;
 }
+
 .port {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 48px;
-    column-gap: 24px;
     flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
 }
 
 .port-item {
@@ -385,7 +384,10 @@ h2 {
     transform: translateY(0);
 }
 .port-item:hover {
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .project-type {
     font-family: "Roboto", sans-serif;
@@ -402,7 +404,7 @@ h2 {
         border-left: 1px solid #E7E9FC;
         border-right: 1px solid #E7E9FC;
 }
-.end {
+.footer {
     background-color: #2E2F42;
     padding: 100px 0;
     display: block;
@@ -435,10 +437,6 @@ h1, h2, h3, h4, h5, h6, p {
     
 }
 
-.section {
-    padding: 120px 0;
-}
-
 .footer-container {
     display: flex;
     align-items: baseline;
@@ -447,23 +445,28 @@ h1, h2, h3, h4, h5, h6, p {
 
 .socials {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: #4d5ae5;
-    border-radius: 50%;
-gap: 16px;
-    /* відстань між кружечками */
+    gap: 16px;
     margin-top: 16px;
 }
+
 .social-item {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
+
+.footer-link {
+    background-color: #4d5ae5;
+}
+
 .footer-link:hover,
 .footer-link:focus {
     background-color: #31d0aa;
+}
+
+.feature-icon {
+    fill: #2e2f42;
+}
+
+.social-icon {
+    fill: #f4f4fd;
 }

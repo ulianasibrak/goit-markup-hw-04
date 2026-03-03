@@ -13,7 +13,7 @@ body {
 .page-header {
     background-color: #FFFFFF;
     border-bottom: 1px solid #E7E9FC;
-    box-shadow: 0 4px 4px 0 rgba(46, 47, 66, 0.08), 0 2px 2px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .page-header .container {
     display: flex;
@@ -74,6 +74,7 @@ ol {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
 .nav-link:hover,
@@ -87,13 +88,14 @@ ol {
 .nav-link.active::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
+    left: 0;
     display: block;
     width: 100%;
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
-    transition: width 0.3s ease-in-out;
+    
 }
 .contacts { 
     display: flex;
@@ -179,6 +181,7 @@ h1 {
     transition-property: background-color;
     transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .button:hover,
@@ -306,9 +309,7 @@ h1 {
     background-color: #404bbf;
 }
 
-.social-icon {
-    fill: #ffffff;
-}
+
 .team-member {
     background-color: #FFFFFF;
     width: 264px;
@@ -469,7 +470,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .feature-icon {
-    fill: #2e2f42;
+    fill: #f4f4fd;
 }
 
 .social-icon {
